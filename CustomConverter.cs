@@ -53,4 +53,12 @@ public static class CustomConverter
             DateTime origin = new DateTime(1970, 1, 1, 0, 0, 0, 0);
             return origin.AddSeconds(seconds);
         }
+    
+       public static bool ToBool(object obj)
+        {
+            bool result = false;
+            bool flag = false;
+            result = Boolean.TryParse(Convert.ToString(obj), out flag);
+            return flag;
+        }
     }
