@@ -1,4 +1,12 @@
-public static class CustomConverter
+﻿using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+
+namespace try_parse
+{
+    public static class TryParse
     {
         public static string ToString(Object obj)
         {
@@ -53,8 +61,8 @@ public static class CustomConverter
             DateTime origin = new DateTime(1970, 1, 1, 0, 0, 0, 0);
             return origin.AddSeconds(seconds);
         }
-    
-       public static bool ToBool(object obj)
+
+        public static bool ToBool(object obj)
         {
             bool result = false;
             bool flag = false;
@@ -62,3 +70,4 @@ public static class CustomConverter
             return flag;
         }
     }
+}
